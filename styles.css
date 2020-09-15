@@ -1,0 +1,30 @@
+body {
+    font-size: 16px;
+}
+
+/* Sketch Pad */
+
+.sketchpad {
+    display: flex;
+    height: 100%;
+}
+
+.container {
+    width: 30em;
+    height: 30em;
+    margin: auto;
+}
+
+.column {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.square {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    border: 1px solid black;
+}
