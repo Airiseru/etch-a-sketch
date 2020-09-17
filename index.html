@@ -4,16 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Etch A Sketch</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <button class="clear btn" onclick="resetColor()">Reset</button>
-    <button class="black btn">Black</button>
-    <button class="random btn">Random Color</button>
-    <button class="pastel btn">Pastel</button>
-    <button class="gridsize btn">Change Grid Size</button>
-    <div class="container">
-        <div class="sketchpad" onmouseover="colorSquare()"></div>
+    <h1>Etch A Sketch</h1>
+    <h3>Hover over the sketchpad to draw</h3>
+    <div class="main">
+        <div class="buttons">
+            <button class="clear btn" onclick="resetColor()">Clear</button>
+            <button class="black btn">Black</button>
+            <button class="random btn">Random Color</button>
+            <button class="pastel btn">Pastel</button>
+            <button class="gridsize btn">Change Grid Size</button>
+        </div>
+        <div class="container">
+            <div class="sketchpad" onmouseover="colorSquare()"></div>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>

@@ -1,5 +1,45 @@
 body {
     font-size: 16px;
+    background: #f67280;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Lobster', cursive;
+    font-size: 3em;
+    margin: .5em;
+}
+
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0 auto 1em;
+}
+
+.main {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.btn {
+    justify-content: center;
+    display: flex;
+    padding: 2% 10px;
+    margin: 5% auto;
+    width: 60%;
+    cursor: pointer;
+    box-shadow: 1px 2px 3px black;
+    outline: none;
+    border: none;
+    background: #fefdca;
+    border-radius: 15px;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    background-color: black;
+    color: #fefdca;
+    box-shadow: 2px 2px 4px white;
 }
 
 /* Sketch Pad */
@@ -7,12 +47,14 @@ body {
 .sketchpad {
     display: flex;
     height: 100%;
+    box-shadow: 3px 3px 4px white;
+    background-color: white;
+    border: 1px solid black;
 }
 
 .container {
-    width: 30em;
-    height: 30em;
-    margin: auto;
+    width: 25em;
+    height: 25em;
 }
 
 .column {
@@ -26,5 +68,69 @@ body {
     display: flex;
     flex-direction: row;
     height: 100%;
-    border: 1px solid black;
+    border: 1.25px solid rgb(189, 185, 185);
+    /* border-radius: 50%; */
+}
+
+@media only screen and (min-width: 675px) {
+    .container {
+        width: 30em;
+        height: 30em;
+    }
+
+    .buttons {
+        width: 40%;
+    }
+}
+
+@media only screen and (max-width: 674px) {
+    .main {
+        display: block;
+    }
+
+    .container {
+        margin: auto;
+    }
+
+    .buttons {
+        display: flex;
+        width: 100%;
+    }
+    
+    .btn {
+        align-items: center;
+        width: 20%;
+        height: 50px;
+        margin: 10px;
+    }
+}
+
+@media only screen and (max-width: 424px) {
+    .container {
+        width: 20em;
+        height: 20em;
+    }
+
+    .btn {
+        width: 14%;
+        padding: 2% 5%;
+        height: 70px;
+    }
+}
+
+@media only screen and (max-width: 345px) {
+    .container {
+        width: 15em;
+        height: 15em;
+    }
+
+    .buttons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .btn {
+        padding: 2% 10%;
+    }
 }

@@ -88,7 +88,9 @@ function colorSquare() {
     squares.forEach((square) => {
         
         square.addEventListener("mouseover", () => {
-            square.style.backgroundColor = currentColor(currentColorNumber);
+            let color = currentColor(currentColorNumber)
+            square.style.backgroundColor = color;
+            square.style.borderColor = color;
         });
     });
 }
