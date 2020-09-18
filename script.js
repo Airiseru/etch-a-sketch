@@ -90,7 +90,7 @@ function colorSquare() {
         square.addEventListener("touchstart", () => {
             square.style.backgroundColor = color;
             square.style.borderColor = color;
-        })
+        }, true)
         
         square.addEventListener("mouseover", () => {
             square.style.backgroundColor = color;
