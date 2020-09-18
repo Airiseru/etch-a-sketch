@@ -98,5 +98,6 @@ function resetColor() {
     let squares = document.querySelectorAll(".square");
     squares.forEach((square) => {
         square.style.backgroundColor = "transparent";
+        square.style.borderColor = "rgb(189, 185, 185)";
     })
 }
