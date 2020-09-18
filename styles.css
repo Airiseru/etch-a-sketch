@@ -71,11 +71,6 @@ h3 {
     border: 1.25px solid rgb(189, 185, 185);
 }
 
-.sketchpad:hover, .sketchpad:active {
-    -webkit-user-select: none;
-    -webkit-touch-callout: none /*only to disable context menu on long press*/
-    }
-
 @media only screen and (min-width: 675px) {
     .container {
         width: 30em;
