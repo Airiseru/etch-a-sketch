@@ -86,9 +86,13 @@ pastel.addEventListener("click", () => {
 function colorSquare() {
     let squares = document.querySelectorAll(".square");
     squares.forEach((square) => {
+        let color = currentColor(currentColorNumber)
+        square.addEventListener("touchstart", () => {
+            square.style.backgroundColor = color;
+            square.style.borderColor = color;
+        })
         
         square.addEventListener("mouseover", () => {
-            let color = currentColor(currentColorNumber)
             square.style.backgroundColor = color;
             square.style.borderColor = color;
         });
