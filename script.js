@@ -2,6 +2,7 @@ const container = document.querySelector(".container");
 const sketchpad = document.querySelector(".sketchpad");
 const gridButton = document.querySelector(".gridsize");
 const reset = document.querySelector(".clear");
+const erase = document.querySelector(".erase");
 const black = document.querySelector(".black");
 const random = document.querySelector(".random");
 const pastel = document.querySelector(".pastel");
@@ -58,6 +59,9 @@ function currentColor(number) {
     else if (number === 2) {
         return pastelColor();
     }
+    else if (number === 3) {
+        return "transparent";
+    }
     else {
         return "#000000";
     }
@@ -83,16 +87,9 @@ pastel.addEventListener("click", () => {
    currentColorNumber = 2; 
 });
 
-function colorSquare() {
-    let squares = document.querySelectorAll(".square");
-    squares.forEach((square) => {
-        square.addEventListener("mouseover", () => {
-            let color = currentColor(currentColorNumber);
-            square.style.backgroundColor = color;
-            square.style.borderColor = color;
-        });
-    });
-}
+erase.addEventListener("click", () => {
+    currentColorNumber = 3;
+});
 
 function resetColor() {
     let squares = document.querySelectorAll(".square");
@@ -100,4 +97,20 @@ function resetColor() {
         square.style.backgroundColor = "transparent";
         square.style.borderColor = "rgb(189, 185, 185)";
     })
+}
+
+function colorSquare() {
+    let squares = document.querySelectorAll(".square");
+    squares.forEach((square) => {
+        square.addEventListener("mouseover", () => {
+            let color = currentColor(currentColorNumber);
+            square.style.backgroundColor = color;
+            if (currentColorNumber === 3) {
+                square.style.borderColor = "rgb(189, 185, 185)";
+            }
+            else {
+                square.style.borderColor = color;
+            }
+        });
+    });
 }
